@@ -33,14 +33,9 @@ class Transposition:
         return decipherText
 
     def _split_len(self, seq):
-        seq = self._pre_processing(seq)
         length = self.length
 
         return [seq[i:i + length] for i in range(0, len(seq), length)]
-
-    @staticmethod
-    def _pre_processing(text):
-        return text.replace(' ', '')
 
     @staticmethod
     def _make_key(length):
